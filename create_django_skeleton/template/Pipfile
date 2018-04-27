@@ -1,0 +1,47 @@
+[[source]]
+url = "https://pypi.douban.com/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+
+django = "*"
+django-mptt = "*"
+django-cors-headers = "*"
+django-guardian = "*"
+django-filter = "*"
+celery = "*"
+flower = "*"
+psycopg2 = "*"
+django-extensions = "*"
+click = "*"
+jinja2 = "*"
+pyyaml = "*"
+django-debug-toolbar = "*"
+django-grappelli = "*"
+requests = "*"
+XlsxWriter = "*"
+
+ipdb = "*"
+
+gevent = "*"
+gunicorn = "*"
+
+[dev-packages]
+
+coverage = "*"
+flake8 = "*"
+autoflake = "*"
+django-coverage-plugin = "*"
+Sphinx = "*"
+sphinx_rtd_theme = "*"
+pytest = "*"
+pytest-django = "*"
+pytest-sugar = "*"
+pytest-cov = "*"
+pytest-html = "*"
+
+[requires]
+python_version = "3.6"
+python_full_version = '3.6.4'
+
