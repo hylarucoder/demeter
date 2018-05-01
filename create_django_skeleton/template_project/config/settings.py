@@ -47,8 +47,9 @@ DJANGO_APPS = (
 )
 
 THIRD_PARTY_APPS = (
-    'guardian',
+    # 'guardian',
     'mptt',
+    'django_extensions',
     'rest_framework',
 )
 
@@ -56,7 +57,7 @@ THIRD_PARTY_APPS = (
 LOCAL_APPS = (
     # Your stuff: custom apps go here
     'webapps.api',
-    'webapps.admin',
+    # 'webapps.admin',
     'webapps.contrib.accounts',
     'webapps.contrib.notifications',
     'webapps.taskapp',
@@ -153,12 +154,12 @@ DATABASES = {
     }
 }
 
-MIDDLEWARE += ['webapps.contrib.extensions.middleware.HostsRequestResponseMiddleware']
+MIDDLEWARE += ['webapps.core.middleware.HostsRequestResponseMiddleware']
 
 if DEBUG:
     # django-debug-toolbar
     # ------------------------------------------------------------------------------
-    MIDDLEWARE += ['webapps.contrib.extensions.middleware.XForwardedForMiddleware']
+    MIDDLEWARE += ['webapps.core.middleware.XForwardedForMiddleware']
     MIDDLEWARE += ['debug_toolbar.middleware.DebugToolbarMiddleware']
     INSTALLED_APPS += ('debug_toolbar',)
     DEBUG_TOOLBAR_CONFIG = {

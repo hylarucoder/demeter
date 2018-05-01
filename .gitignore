@@ -100,3 +100,4 @@ ENV/
 config.yaml
 .DS_Store
 Pipfile.lock
+db.sqlite
